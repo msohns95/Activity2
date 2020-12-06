@@ -1,0 +1,16 @@
+name: "Example Action"
+description: "This will print out information"
+author: "Michael Sohns"
+
+inputs:
+  NAME:
+    description: "Name of user"
+    required: true
+    default: "Donald Duck"
+  AGE:
+    description: "Age of user"
+    required: true
+    default: "20"
+  runs:
+    using: "docker"
+    image: "Dockerfile"
