@@ -11,6 +11,10 @@ inputs:
     description: "Age of user"
     required: true
     default: "20"
+  YEARS:
+    description: "Future years"
+    required: true
+    default: "0"
   runs:
     using: "docker"
     image: "Dockerfile"
