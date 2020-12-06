@@ -1,7 +1,7 @@
-name: Our First Workgflow
-on: oush
-
-jobs:  
+name: Our First Workflow
+on: pull_request:
+  types: [labeled]
+  jobs:  
   build:
     name: Fire off my action
     runs-on: ubuntu-latest
@@ -10,3 +10,5 @@ jobs:
       - uses: ./actions/first-action
         with: 
           AGE: "42"
+
+
