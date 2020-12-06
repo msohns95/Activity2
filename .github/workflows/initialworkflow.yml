@@ -9,6 +9,8 @@ on: pull_request:
       - uses: actions/checkout@v1
       - uses: ./actions/first-action
         with: 
-          AGE: "42"
+          NAME:'${{ secrets.Name }}'
+          AGE: '${{ secrets.Age }}'
+          YEARS: "7"
 
 
