@@ -1,16 +1,17 @@
 name: Our First Workflow
-on: pull_request:
-  types: [labeled]
-  jobs:  
-  build:
-    name: Fire off my action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: ./actions/first-action
-        with: 
-          NAME:'${{ secrets.Name }}'
-          AGE: '${{ secrets.Age }}'
-          YEARS: "7"
+on: 
+  pull_request:
+    types: labeled "age"
+    jobs:  
+      build:
+        name: Fire off my action
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v1
+          - uses: ./actions/first-action
+            with: 
+              NAME:'${{ secrets.Name }}'
+              AGE:'${{ secrets.Age }}'
+              YEARS:"7"
 
 
